@@ -6,6 +6,7 @@ float speedX = -3;
 int screen = 0;
 int score = 0;
 float d;
+int[]; 
 void setup()
 {
   size(800, 800);
@@ -41,7 +42,8 @@ void draw()
 }
 void loadingscreen()
 {
-  text("Press enter to play", 350, 400);
+  text("Pong Ripoff",300,400);
+  text("Press enter to play", 300, 750);
   textSize(26);
   if (keyCode==ENTER)
   {
