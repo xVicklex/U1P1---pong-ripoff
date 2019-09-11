@@ -5,10 +5,13 @@ float easing = 0.05;
 float speedX = -3;
 int screen = 0;
 int score = 0;
+float d;
 void setup()
 {
   size(800, 800);
   noStroke();
+  rectMode(CENTER);
+ 
 }
 
 
@@ -49,6 +52,7 @@ void loadingscreen()
 void Game()
 {
 
+ X = X + speedX;
   text("Score : "+score, 100, 100);
   float targetX = mouseX;
   float dx = targetX - x;
@@ -60,5 +64,13 @@ void Game()
 
   rect(x, y, 30, 50 );
   ellipse(X, 400, 50, 50);
-  X = X + speedX;
+ 
+
+  
+   float d = dist(X, 400, x, y);
+   if (d<15)
+  {
+    speedX*=-1;
+  }
+ 
 }
